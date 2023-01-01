@@ -86,7 +86,7 @@ student name is viru, roll number is 2 and marks are 70
 -> 1) attributes
    2) Methods
 
-   1) attributes :-
+   **1) attributes :-
     -> 1)instance Variables
     -> 2)class variables
     -> 3)local Variables
@@ -118,14 +118,14 @@ student name is viru, roll number is 2 and marks are 70
         e.g.
             class Bank:
 
-            #  as per it defination inside class and above construtor
-            bankname = 'SBI' # Class vaiables 
+                #  as per it defination inside class and above construtor
+                bankname = 'SBI' # Class vaiables 
 
-            def __init__(self, acc, name, ammt):    #Constructor
-                self.account_no = acc   
-                self.name = name           
-                self.ammount = ammt     
-                
+                def __init__(self, acc, name, ammt):    #Constructor
+                    self.account_no = acc   
+                    self.name = name           
+                    self.ammount = ammt     
+                    
             c1 = Bank(101, 'jay', 5000)
             print(c1)
             print(id(c1))
@@ -138,4 +138,31 @@ student name is viru, roll number is 2 and marks are 70
     3) Local vairables :-   
     -> These vaiables are used to store local data temparary
 
-    
+    e.g.
+            class Bank:
+            
+                bank_name = 'SBI' 
+                
+                def __init__(self, acc, name, ammt):
+                    self.account_no = acc   
+                    self.name = name           
+                    self.ammount = ammt 
+
+                def new_bank(self):
+                    bank_name = "BOM" # local vaiables
+                    print(bank_name)
+
+                
+            c1 = Bank(101, 'jay', 5000)
+            print(c1.name)
+            print(c1.ammount)
+            print(c1.bank_name)
+            c1.new_bank()
+
+    **2) Methods
+        1) instance Methods
+        2) Class Methods
+        3) static Methods
+
+    1) instance Methods:-
+    -> Within the method if we access instance vaiables and first argument of the Methods is self then that method is called instance method.

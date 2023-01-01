@@ -82,3 +82,60 @@ o/p :
 student name is jay, roll number is 1 and marks are 88
 student name is viru, roll number is 2 and marks are 70
 
+** What is inside class??
+-> 1) attributes
+   2) Methods
+
+   1) attributes :-
+    -> 1)instance Variables
+    -> 2)class variables
+    -> 3)local Variables
+
+    1)instance Variables :-
+        -> The variables difined inside instance Methods is called instance vairable
+        -> These vairables are always written with self.
+    
+    e.g.
+        class Bank:
+            bankname = 'SBI'
+            def __init__(self, acc, name, ammt):
+                self.account_no = acc   # self.account_no instance vairables
+                self.name = name        # self.name instance vairables
+                self.ammount = ammt     # self.ammount instance vairables
+
+        c1 = Bank(101, 'jay', 5000)
+        print(c1)
+        print(id(c1))
+        print(type(c1))
+
+        print(c1.name)
+        print(c1.ammount)
+        print(c1.bankname)
+
+    2) class vairables :-
+    -> These vairables are defined inside class and above constaructor.
+ 
+        e.g.
+            class Bank:
+
+            #  as per it defination inside class and above construtor
+            bankname = 'SBI' # Class vaiables 
+
+            def __init__(self, acc, name, ammt):    #Constructor
+                self.account_no = acc   
+                self.name = name           
+                self.ammount = ammt     
+                
+            c1 = Bank(101, 'jay', 5000)
+            print(c1)
+            print(id(c1))
+            print(type(c1))
+
+            print(c1.name)
+            print(c1.ammount)
+            print(c1.bankname)
+
+    3) Local vairables :-   
+    -> These vaiables are used to store local data temparary
+
+    
